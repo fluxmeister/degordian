@@ -1,0 +1,34 @@
+/*
+Theme Name: Degordian
+Description: Child theme of GeneratePress, made for Degordian task
+Theme URL: https://vektorwebsolutions.com
+Author: Zelyco Steve
+Author URL: https://zelycode.com
+Template: generatepress
+Text Domain: Degordian
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+@import url("../generatepress/style.css");
+
+
+/* Theme customization starts here
+-------------------------------------------------------------- */
+
+.hide {
+   display: none;
+}
+.clear {
+   clear: both;
+}
+
+ 
