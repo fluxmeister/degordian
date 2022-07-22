@@ -28,6 +28,9 @@ Format u kojem je potrebno poslati rešenje: Zadatak nam pošalji u .zip fajlu. 
 
 Rok za slanje rešenja: srijeda, 27.7.2022. do kraja dana 
 
+*************************************************************************************************************  
+230722  : Install Query Monitor plugin 
+
 210722  : Install GeneratePress  
         : Install child theme  
         
