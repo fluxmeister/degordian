@@ -33,7 +33,8 @@ Rok za slanje rešenja: srijeda, 27.7.2022. do kraja dana
         : Install Show Current Template 0.4.6 plugin  
         : Set primary nav  
         : RouteAPI plugin development start  
-
+        : Set route v1/posts  
+        
 210722  : Install GeneratePress  
         : Install child theme  
         
