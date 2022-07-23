@@ -1,7 +1,7 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== RouteAPI ===
+Contributors: (fluxmeister)
 Donate link: https://zelycode.com
-Tags: comments, spam
+Tags: degordian, test
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
@@ -12,10 +12,25 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Napraviti plugin koji će kreirati API rutu za izlistavanje blog postova sa sledećim specifikacijama:
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Ruta treba da bude BASE_URL/wp-json/v1/posts, da koristi GET metodu i da vraća validan JSON
+
+API na defaultnoj ruti treba da izlista poslednjih 10 blog postova, informaciju o tome da li postoji sledeća stranica, kao i ukupan broj stranica rezultata
+
+API treba da ima mogućnost promene broja izlistanih blog postova po stranici, kao i promene tražene stranice (npr. BASE_URL/wp-json/v1/posts?per_page=5&page=3)
+
+Post objekat koji API vraća treba da poseduje sledeće informacije: ID, title, excerpt, content, created_at
+
+U slučaju da API dobije GET parametar ‘include=categories’, svaki blog post pored gore navedenih informacija treba da sadrži i listu svih kategorija kojima pripada
+
+API treba da ima mogućnost filtriranja rezultata po nazivu kategorije putem GET parametra (npr. category='Base Category')
+
+API treba da ima mogućnost sortiranja rezultata po title-u i datumu kreiranja putem GET parametara (npr. order_by=title&order=ASC, order_by=date&order=DESC)
+
+Bonus poeni: Izrada teme (front-end izgled nije bitan) koja ce pozivati tvoje API rute i izlistavati filtrirane blog postove.
+
+Ocenjuje se: Prevashodno cenimo pismenost, strukturu i jasnoću koda, kao i poznavanje WordPress funkcionalnosti. Kod treba da bude razumljiv i jednostavan.
 
 A few notes about the sections above:
 
