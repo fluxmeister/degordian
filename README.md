@@ -31,6 +31,7 @@ Rok za slanje rešenja: srijeda, 27.7.2022. do kraja dana
 *************************************************************************************************************  
 230722  : Install Query Monitor plugin  
         : Install Show Current Template 0.4.6 plugin  
+        : Set primary nav  
 
 210722  : Install GeneratePress  
         : Install child theme  
