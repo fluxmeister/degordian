@@ -58,13 +58,13 @@ add_action('rest_api_init', 'register_test_route');
 
 function register_test_route() {
 	register_rest_route(
-		'v1/posts',
-		'my-endpoint',
+		'v1/posts', // namespace  
+		'testing', // route name, the last part of the URL we call to access this route  
 		array(
 			'methods' => WP_REST_Server::READABLE,
 			'callback' => 'callback_function',
 			'permission_callback' => '__return_true'
-		)
+		) // args 
 	);
 }
 
