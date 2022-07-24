@@ -54,9 +54,9 @@
  * WordPress provides some constants as part of the WP_REST_Server class to make your method names more clear.  
  * 
  */
-add_action('rest_api_init', 'register_test_route');
+add_action('rest_api_init', 'vvs_register_test_route');
 
-function register_test_route() {
+function vvs_register_test_route() {
 	register_rest_route(
 		'v1/posts', // namespace  
 		'test-api', // route name, the last part of the URL we call to access this route  

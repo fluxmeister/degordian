@@ -29,6 +29,8 @@ Format u kojem je potrebno poslati rešenje: Zadatak nam pošalji u .zip fajlu. 
 Rok za slanje rešenja: srijeda, 27.7.2022. do kraja dana 
 *************************************************************************************************************  
 *************************************************************************************************************  
+
+*************************************************************************************************************  
 Routes in the REST API are represented by URIs. The route itself is what is tacked onto the end of https://ourawesomesite.com/wp-json. The index route for the API is ‘/’, which is why https://ourawesomesite.com/wp-json/` returns all of the available information for the API. All routes should be built onto this route, the wp-json portion can be changed, but in general, it is advised to keep it the same.
 
 We want to make sure that our routes are unique. For instance, we could have a route for books like this: /books. Our books route would now live at https://ourawesomesite.com/wp-json/books. However, this is not a good practice as we would end up polluting potential routes for the API. What if another plugin we wanted to register a books route as well? We would be in big trouble in that case, as the two routes would conflict with each other and only one could be used. The fourth parameter to register_rest_route()` is a boolean for whether the route should override an existing route. The override parameter does not really solve our problem either, as both routes could override or we would want to use both routes for different things. This is where using namespaces for our routes comes in.
