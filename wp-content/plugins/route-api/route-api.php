@@ -26,7 +26,7 @@ add_action('rest_api_init', 'vvs_register_test_route');
 function vvs_register_test_route() {
 	register_rest_route(
 		'v1/posts', // namespace  
-		'test-api', // route name, endpoint, the last part of the URL we call to access this route  
+		'test', // route name, endpoint, the last part of the URL we call to access this route  
 		array(
 			'methods' => WP_REST_Server::READABLE, // methods: GET  
 			'callback' => 'callback_function',
@@ -37,10 +37,14 @@ function vvs_register_test_route() {
 
 /**
  * The callback function for your route is a normal PHP function, 
- * but it receives a full $request object as it’s parameter
+ * but it receives a full $request object as it’s parameter.
+ * The $request parameter is a WP_Rest_Request instance and 
+ * can contain body data, url parameters, and more.  
  */
 function callback_function($request) {
-	// do stuff here
+	$name = $request->get_param('name');
+
+	return rest_ensure_response("hello {$name}!");
 }
 
 // If this file is called directly, abort.
