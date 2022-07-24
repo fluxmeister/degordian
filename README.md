@@ -29,7 +29,11 @@ Format u kojem je potrebno poslati rešenje: Zadatak nam pošalji u .zip fajlu. 
 Rok za slanje rešenja: srijeda, 27.7.2022. do kraja dana 
 *************************************************************************************************************  
 *************************************************************************************************************  
-
+‘Routes’ and ‘endpoints’: A route is a URL you enter to make a request, whereas an endpoint is the combination of a URL with an HTTP method.  
+Requests: When you submit an endpoint, you’re making a request to the server.  
+Responses: If your endpoint is structured in the right way, you’ll get a response including the information you want in JavaScript Object Notation (JSON), or an error.  
+Schemas: Every response you get follows similar structures, which are governed by built-in schemas.  
+Controller classes: You can use these to build your own routes and endpoints, but this falls under more advanced WordPress REST API uses.  
 *************************************************************************************************************  
 Routes in the REST API are represented by URIs. The route itself is what is tacked onto the end of https://ourawesomesite.com/wp-json. The index route for the API is ‘/’, which is why https://ourawesomesite.com/wp-json/` returns all of the available information for the API. All routes should be built onto this route, the wp-json portion can be changed, but in general, it is advised to keep it the same.
 
