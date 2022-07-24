@@ -45,6 +45,8 @@ function callback_function($request) {
 	$name = $request->get_param('name');
 
 	return rest_ensure_response("hello {$name}!");
+} else {
+	return new WP_Error('missing_fields', 'please include name as a parameter');
 }
 
 // If this file is called directly, abort.
