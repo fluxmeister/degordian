@@ -21,12 +21,12 @@
 /**
  * 
  */
-add_action('rest_api_init', 'vvs_register_test_route');
+add_action('rest_api_init', 'vvs_register_test_routes');
 
-function vvs_register_test_route() {
+function vvs_register_test_routes() {
 	register_rest_route(
-		'v1/posts', // namespace  
-		'test', // route name, endpoint, the last part of the URL we call to access this route  
+		'v1', // namespace  
+		'/posts', // route name, endpoint, the last part of the URL we call to access this route  
 		array(
 			'methods' => WP_REST_Server::READABLE, // methods: GET  
 			'callback' => 'callback_function',
@@ -44,10 +44,12 @@ function vvs_register_test_route() {
 function callback_function($request) {
 	$name = $request->get_param('name');
 
-	return rest_ensure_response("hello {$name}!");
-} else {
-	return new WP_Error('missing_fields', 'please include name as a parameter');
-}
+	// return rest_ensure_response("hello {$name}!");
+	return  "Ovde cemo da prikazemo postove, jer ruta radi kako treba.";
+} 
+// 	else {
+// 	return new WP_Error('missing_fields', 'please include name as a parameter');
+// }
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
