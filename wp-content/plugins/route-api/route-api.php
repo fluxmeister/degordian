@@ -51,7 +51,13 @@ function postSearchResults() {
 
 	while($blog->have_posts()) {
 		$blog->the_post();
-		array_push($blogResults, get_the_ID(), get_the_title(), get_the_excerpt(), get_the_content(), get_the_date());
+		array_push($blogResults, array(
+			'id' 		=> get_the_ID(), 
+			'title' 	=> get_the_title(), 
+			'excerpt' 	=> get_the_excerpt(), 
+			'content' 	=> get_the_content(), 
+			'date' 		=> get_the_date()
+		));
 	}
 
 	return $blogResults;
