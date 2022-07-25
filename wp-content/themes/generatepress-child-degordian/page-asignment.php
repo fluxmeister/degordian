@@ -34,9 +34,13 @@ get_header(); ?>
 
 				endwhile;
 			}
+            ?>
 
-            echo 'ovde će ići blog postovi';
+            <button id="blog-posts-button">Učitaj blog postove</button>
+            
 
+
+            <?php    
 			/**
 			 * generate_after_main_content hook.
 			 *
