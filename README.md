@@ -47,6 +47,10 @@ If we wanted to create an endpoint that would return the phrase “Hello World, 
 *************************************************************************************************************  
 *************************************************************************************************************  
 *************************************************************************************************************  
+250722  : Add main.js  
+        : Add Assignment page  
+        : Register main.js in functions.php  
+
 230722  : Install Query Monitor plugin  
         : Install Show Current Template 0.4.6 plugin  
         : Set primary nav  
