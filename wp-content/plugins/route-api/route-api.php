@@ -47,7 +47,14 @@ function postSearchResults() {
 		'post_type'	=>	'post'
 	));
 
-	return $blog->posts;
+	$blogResults = array();
+
+	while($blog->have_posts()) {
+		$blog->the_post();
+		array_push($blogResults, get_the_ID(), get_the_title(), get_the_excerpt(), get_the_content(), get_the_date());
+	}
+
+	return $blogResults;
 
 } 
 // 	else {
