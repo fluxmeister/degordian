@@ -42,7 +42,7 @@ function vvs_register_test_routes() {
  * can contain body data, url parameters, and more.  
  */
 function callback_function($request) {
-	$name = $request->get_param('name');
+	// $name = $request->get_param('name');
 
 	// return rest_ensure_response("hello {$name}!");
 	return  "Ovde cemo da prikazemo postove, jer ruta radi kako treba.";

@@ -22,8 +22,11 @@ function theme_enqueue_scripts(){
 add_action( "wp_enqueue_scripts", "theme_enqueue_scripts" );
 
 /**
- * Add custom functions here
+ * Enqueue scripts
  */
+function route_api() {
+   wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.js', NULL, 1.0, true);
+}
 
 /**
  * Multilingual
