@@ -37,7 +37,7 @@ get_header(); ?>
             ?>
 
             <button id="blog-posts-button">Učitaj blog postove</button>
-            
+            <div id="blog-posts-container"></div>
 
 
             <?php    
