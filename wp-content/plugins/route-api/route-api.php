@@ -26,26 +26,29 @@ add_action('rest_api_init', 'vvs_register_test_routes');
 function vvs_register_test_routes() {
 	register_rest_route(
 		'v1', // namespace  
-		'/posts', // route name, endpoint, the last part of the URL we call to access this route  
+		'posts', // route name, endpoint, the last part of the URL we call to access this route  
 		array(
 			'methods' => WP_REST_Server::READABLE, // methods: GET  
-			'callback' => 'callback_function',
+			'callback' => 'postSearchResults',
 			'permission_callback' => '__return_true' // we create a public route  
 		) // args 
 	);
 }
 
 /**
- * The callback function for your route is a normal PHP function, 
+ * The callback function for our route is a normal PHP function, 
  * but it receives a full $request object as it’s parameter.
  * The $request parameter is a WP_Rest_Request instance and 
  * can contain body data, url parameters, and more.  
  */
-function callback_function($request) {
-	// $name = $request->get_param('name');
+// function postSearchResults($request) {
+function postSearchResults() {
+	$blog	=	new WP_Query(array(
+		'post_type'	=>	'post'
+	));
 
-	// return rest_ensure_response("hello {$name}!");
-	return  "Ovde cemo da prikazemo postove, jer ruta radi kako treba.";
+	return $blog->posts;
+
 } 
 // 	else {
 // 	return new WP_Error('missing_fields', 'please include name as a parameter');
