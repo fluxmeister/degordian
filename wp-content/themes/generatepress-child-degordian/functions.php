@@ -25,8 +25,9 @@ add_action( "wp_enqueue_scripts", "theme_enqueue_scripts" );
  * Enqueue scripts
  */
 function route_api() {
-   wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.js', NULL, 1.0, true);
+   wp_enqueue_script('main_js', get_theme_file_uri() . '/js/main.js', NULL, 1.0, true);
 }
+add_action( 'wp_enqueue_scripts', 'route_api' );
 
 /**
  * Multilingual
