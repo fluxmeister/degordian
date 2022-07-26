@@ -41,11 +41,10 @@ function vvs_register_test_routes() {
  * The $request parameter is a WP_Rest_Request instance and 
  * can contain body data, url parameters, and more.  
  */
-// function postSearchResults($request) {
-function postSearchResults() {
+function postSearchResults($request) {
 	$blog	=	new WP_Query(array(
-		'post_type'	=>	'post', 
-		'posts_per_page'	=> 10
+		'post_type'			=>	array('post') // here we are able to add 'page', or 'comment'... in array to be searched for
+		// 's'					=> sanitize_text_field($request['per_page'])
 	));
 
 	$blogResults = array();
