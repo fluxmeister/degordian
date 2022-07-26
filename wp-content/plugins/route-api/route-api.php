@@ -44,7 +44,8 @@ function vvs_register_test_routes() {
 // function postSearchResults($request) {
 function postSearchResults() {
 	$blog	=	new WP_Query(array(
-		'post_type'	=>	'post'
+		'post_type'	=>	'post', 
+		'posts_per_page'	=> 10
 	));
 
 	$blogResults = array();
@@ -61,6 +62,8 @@ function postSearchResults() {
 	}
 
 	return $blogResults;
+
+	wp_reset_postdata(); //Restore original Post Data
 
 } 
 // 	else {
